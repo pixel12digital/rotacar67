@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rota67 Car - O aplicativo da sua cidade</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="assets/logo.png" alt="Rota67 Car Logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="#features">Funcionalidades</a></li>
+                    <li><a href="#partners">Parceiros</a></li>
+                    <li><a href="#" id="open-popup-btn">Download</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="container">
+                <img src="assets/logo.png" alt="Rota67 Car Logo" class="hero-logo">
+                <h2>O seu aplicativo de mobilidade urbana. Rápido, seguro e na palma da sua mão.</h2>
+                <a href="#" class="btn-hero" id="open-popup-btn-hero">Baixe o App</a>
+            </div>
+        </section>
+
+        <section id="features">
+            <div class="container">
+                <h2>Funcionalidades do Rota67 Car</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <ion-icon name="speedometer-outline"></ion-icon>
+                        <h3>Viagens Rápidas</h3>
+                        <p>Encontre o motorista mais próximo e chegue ao seu destino em minutos.</p>
+                    </div>
+                    <div class="feature-item">
+                        <ion-icon name="shield-checkmark-outline"></ion-icon>
+                        <h3>Segurança</h3>
+                        <p>Motoristas verificados e rastreamento de viagem em tempo real para sua tranquilidade.</p>
+                    </div>
+                    <div class="feature-item">
+                        <ion-icon name="card-outline"></ion-icon>
+                        <h3>Pagamento Fácil</h3>
+                        <p>Pague suas corridas com cartão de crédito, débito ou dinheiro.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="partners">
+            <div class="container">
+                <h2>Nossos Parceiros</h2>
+                <!-- Slider main container -->
+                <div class="swiper-container partners-slider">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <a href="https://wa.me/5567999233546?text=Olá!%20Vi%20seu%20anúncio%20no%20site%20do%20Rota67%20Car." target="_blank" class="partner-item">
+                                <img src="assets/parceiros/audicon.jpg" alt="Parceiro Audicon">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://wa.me/5567998194124?text=Olá!%20Vi%20seu%20anúncio%20no%20site%20do%20Rota67%20Car." target="_blank" class="partner-item">
+                                <img src="assets/parceiros/centralautocenter.jpg" alt="Parceiro Central Auto Center">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://wa.me/5567999615833?text=Olá!%20Vi%20seu%20anúncio%20no%20site%20do%20Rota67%20Car." target="_blank" class="partner-item">
+                                <img src="assets/parceiros/hairdesign.jpg" alt="Parceiro Hair Design">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://wa.me/5567996495919?text=Olá!%20Vi%20seu%20anúncio%20no%20site%20do%20Rota67%20Car." target="_blank" class="partner-item">
+                                <img src="assets/parceiros/maxs.jpg" alt="Parceiro Max's">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                             <a href="https://wa.me/5567999581527?text=Olá!%20Vi%20seu%20anúncio%20no%20site%20do%20Rota67%20Car." target="_blank" class="partner-item">
+                                <img src="assets/parceiros/pelegal.jpg" alt="Parceiro Pé Legal">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://wa.me/5567996766019?text=Olá!%20Vi%20seu%20anúncio%20no%20site%20do%20Rota67%20Car." target="_blank" class="partner-item">
+                                <img src="assets/parceiros/requinte.jpg" alt="Parceiro Requinte">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://wa.me/5567996681827?text=Olá!%20Vi%20seu%20anúncio%20no%20site%20do%20Rota67%20Car." target="_blank" class="partner-item">
+                                <img src="assets/parceiros/sr-transportadora.jpg" alt="Parceiro SR Transportadora">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Rota67 Car. Todos os direitos reservados. | Desenvolvido por <a href="https://pixel12digital.com.br" target="_blank" rel="noopener noreferrer">Pixel12Digital</a></p>
+        </div>
+    </footer>
+
+    <!-- The Modal -->
+    <div id="download-modal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>Baixe o Rota67 Car</h3>
+            <p>Escolha a sua plataforma e comece a usar!</p>
+            <div class="modal-download-buttons">
+                <a href="https://play.google.com/store/apps/details?id=br.com.rota67car.passenger.drivermachine" target="_blank" class="btn-download android">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Disponível no Google Play">
+                </a>
+                <a href="#" class="btn-download apple">
+                     <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="Baixe na App Store">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <a href="https://wa.me/556796347599" class="whatsapp-float" target="_blank" aria-label="Fale conosco pelo WhatsApp">
+        <ion-icon name="logo-whatsapp"></ion-icon>
+    </a>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html> 

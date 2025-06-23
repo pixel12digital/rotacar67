@@ -56,4 +56,20 @@ window.addEventListener("click", function(event) {
     if (event.target == modal) {
         closeModal();
     }
+});
+
+// Contact Form
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const contactInfo = document.getElementById('contact-info').value;
+    const message = document.getElementById('message').value;
+
+    const whatsappNumber = "556796347599";
+    const text = `Olá! Meu nome é ${name} (${contactInfo}).\n\nMensagem: ${message}`;
+
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+
+    window.open(whatsappUrl, '_blank');
 }); 

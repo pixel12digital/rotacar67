@@ -32,25 +32,40 @@ header .container {
     height: 60px;
 }
 
-nav ul {
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.nav-menu {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
 }
 
-nav ul li {
+.nav-menu li {
     margin-left: 20px;
 }
 
-nav a {
+.nav-menu a {
     color: #ffffff;
     text-decoration: none;
     font-weight: 700;
     transition: color 0.3s ease;
 }
 
-nav a:hover {
+.nav-menu a:hover {
     color: #e53935;
 }
 
@@ -220,6 +235,42 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 80px;
+        flex-direction: column;
+        background-color: #1a1a1a;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        z-index: 1000;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-menu li {
+        margin: 0;
+        padding: 15px 0;
+        border-bottom: 1px solid #333;
+    }
+
+    .nav-menu li:last-child {
+        border-bottom: none;
+    }
+
+    .nav-menu a {
+        display: block;
+        padding: 10px 20px;
+    }
+
     #hero h1 {
         font-size: 2.5rem;
     }
@@ -234,8 +285,51 @@ footer {
     }
 
     header .container {
-        flex-direction: column;
-        gap: 10px;
+        flex-direction: row;
+        gap: 0;
+    }
+
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 24px;
+        z-index: 9999;
+    }
+
+    .modal {
+        padding: 10px;
+    }
+
+    .modal-content {
+        margin: 5% auto;
+        padding: 20px;
+        width: 95%;
+    }
+
+    .modal-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .modal-content p {
+        font-size: 1rem;
+    }
+
+    .modal-download-buttons .btn-download img {
+        height: 45px;
+    }
+
+    #contact-form {
+        padding: 0 20px;
+    }
+
+    .partners-slider {
+        padding: 5px 0;
+    }
+
+    .partner-item img {
+        max-width: 120px;
     }
 }
 
@@ -251,7 +345,7 @@ footer {
     text-align: center;
     font-size: 30px;
     box-shadow: 2px 2px 3px #999;
-    z-index: 1000;
+    z-index: 9999;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -261,16 +355,6 @@ footer {
 
 .whatsapp-float:hover {
     background-color: #128C7E;
-}
-
-@media (max-width: 768px) {
-    .whatsapp-float {
-        width: 50px;
-        height: 50px;
-        bottom: 20px;
-        right: 20px;
-        font-size: 24px;
-    }
 }
 
 /* Hero Button */
@@ -304,12 +388,13 @@ footer {
     height: 100%;
     overflow: auto; 
     background-color: rgba(0,0,0,0.6); 
-    padding-top: 60px;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .modal-content {
     background-color: #1e1e1e;
-    margin: 5% auto;
+    margin: 10% auto;
     padding: 30px;
     border: 1px solid #333;
     width: 90%;
@@ -318,7 +403,8 @@ footer {
     text-align: center;
     position: relative;
     animation-name: animatetop;
-    animation-duration: 0.4s
+    animation-duration: 0.4s;
+    box-sizing: border-box;
 }
 
 @keyframes animatetop {

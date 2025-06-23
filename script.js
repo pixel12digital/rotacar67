@@ -72,4 +72,26 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
 
     window.open(whatsappUrl, '_blank');
+});
+
+// Mobile Menu Toggle
+const menuToggle = document.getElementById('menu-toggle');
+const navMenu = document.getElementById('nav-menu');
+
+menuToggle.addEventListener('click', function() {
+    navMenu.classList.toggle('active');
+});
+
+// Close mobile menu when clicking on a link
+document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+    });
+});
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', function(event) {
+    if (!event.target.closest('nav') && navMenu.classList.contains('active')) {
+        navMenu.classList.remove('active');
+    }
 }); 
